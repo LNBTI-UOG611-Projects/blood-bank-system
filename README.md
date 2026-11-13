@@ -104,10 +104,9 @@ cd <project-folder>
 # 6. Start the application
 ```
  
-## Project Structure
- 
+# Project Structure
 
- 
+```text
 blood-bank-system/
 │
 ├── .github/
@@ -115,8 +114,6 @@ blood-bank-system/
 ├── backend/
 │   ├── .env.example
 │   └── src/
-│       ├── ...
-│       └── ...
 │
 ├── frontend/
 │   ├── .env.example
@@ -126,8 +123,11 @@ blood-bank-system/
 │   ├── index.html
 │   ├── package.json
 │   ├── package-lock.json
+│   │
 │   ├── public/
+│   │
 │   ├── src/
+│   │
 │   └── vite.config.js
 │
 ├── docs/
@@ -135,6 +135,9 @@ blood-bank-system/
 │
 ├── .gitignore
 └── docker-compose.yml
+```
+
+**Note:** This structure is based on the previously shared terminal output. The root `README.md` and `docker-compose.yml` may have since been deleted. The internal contents of `backend/src`, `frontend/src`, and `.github` have not yet been fully inspected.
 
 
  
