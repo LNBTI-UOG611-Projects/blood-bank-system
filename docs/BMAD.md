@@ -1,36 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bmad · MD
 # BMAD Method
  
 **Breakthrough Method for Agile AI-Driven Development**
