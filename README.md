@@ -108,13 +108,35 @@ cd <project-folder>
  
 
  
-```text
-.
-├── docs/            # Project documentation
-│   └── BMAD.md      # BMAD Method reference
-├── src/             # Application source code
-└── README.md
-```
+blood-bank-system/
+│
+├── .github/
+│
+├── backend/
+│   ├── .env.example
+│   └── src/
+│       ├── ...
+│       └── ...
+│
+├── frontend/
+│   ├── .env.example
+│   ├── .gitignore
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── public/
+│   ├── src/
+│   └── vite.config.js
+│
+├── docs/
+│   └── BMAD.md
+│
+├── .gitignore
+└── docker-compose.yml
+
+
  
 ## Documentation
  
