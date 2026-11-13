@@ -34,14 +34,13 @@ BBMS helps a blood bank keep track of who donates, what is in stock, and where e
 The system is CRUD-driven (Create, Read, Update, Delete), with all records stored in a database.
  
 ## Problem Statement
+
+Blood banks that rely on manual records struggle to track donors, monitor expiry dates and respond quickly to emergency requests, which leads to wasted blood and delayed treatment. BBMS provides a single web-based system that tracks every blood unit from donor to patient, enforces expiry and issuing rules, and protects donor privacy.
  
-<!-- TODO: Replace with the problem statement from the project proposal. -->
- 
-Describe in 3 to 5 sentences the real-world problem this project solves, for example how blood banks in Sri Lanka currently track donors and stock, and what goes wrong.
  
 ## Key Features
  
-<!-- TODO: Update this list to match the final requirements document. -->
+
  
 ### Donor Management
 - Register, view, update and delete donor records
@@ -59,7 +58,7 @@ Describe in 3 to 5 sentences the real-world problem this project solves, for exa
 - Audit log of important actions
 ## User Roles
  
-<!-- TODO: Adjust to the roles in your requirements document. -->
+
  
 | Role | What they can do |
 |---|---|
@@ -70,7 +69,7 @@ Describe in 3 to 5 sentences the real-world problem this project solves, for exa
  
 ## Tech Stack
  
-<!-- TODO: Fill in the technologies your group actually chose. -->
+
  
 | Layer | Technology |
 |---|---|
@@ -81,7 +80,7 @@ Describe in 3 to 5 sentences the real-world problem this project solves, for exa
  
 ## Getting Started
  
-<!-- TODO: Replace the commands below with the real setup steps for your stack. -->
+
  
 ### Prerequisites
  
@@ -107,7 +106,7 @@ cd <project-folder>
  
 ## Project Structure
  
-<!-- TODO: Update to match the real folders. -->
+
  
 ```text
 .
@@ -131,7 +130,7 @@ See [docs/BMAD.md](docs/BMAD.md) for details.
  
 ## Project Status
  
-<!-- TODO: Keep this section up to date. -->
+
  
 **Status:** In development
  
