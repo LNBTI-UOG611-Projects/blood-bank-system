@@ -97,16 +97,12 @@ git clone <your-repository-url>
 cd <project-folder>
  
 # 3. Install dependencies
-# (add the command for your stack)
  
 # 4. Create your environment file and set the database details
-# (add the steps for your stack)
  
 # 5. Set up the database
-# (add the migration / import steps)
  
 # 6. Start the application
-# (add the run command)
 ```
  
 ## Project Structure
