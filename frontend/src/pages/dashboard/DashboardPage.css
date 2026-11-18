@@ -1,0 +1,139 @@
+.dash-card {
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.dash-card__title {
+  margin-bottom: var(--space-4);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+}
+
+/* Welcome */
+.dash-welcome h2 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
+
+.dash-welcome p {
+  margin-top: var(--space-1);
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+/* Stats */
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dash-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  border-top: 4px solid var(--stat-color);
+}
+
+.dash-stat--red { --stat-color: var(--color-primary); }
+.dash-stat--teal { --stat-color: var(--color-teal); }
+.dash-stat--blue { --stat-color: var(--color-blue); }
+.dash-stat--amber { --stat-color: var(--color-warning); }
+
+.dash-stat__label {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+}
+
+.dash-stat__value {
+  font-size: 1.625rem; /* 26px */
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+  color: var(--stat-color);
+}
+
+.dash-stat__note {
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Two cards side by side */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.dash-actions {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dash-actions__btn {
+  justify-content: space-between;
+}
+
+.dash-account {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.dash-account div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+.dash-account dt {
+  color: var(--color-text-muted);
+}
+
+.dash-account dd {
+  margin: 0;
+  font-weight: var(--fw-medium);
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+/* Placeholder for menu pages not built yet */
+.dash-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding-block: var(--space-10);
+}
+
+.dash-empty h2 {
+  font-size: 1.25rem;
+}
+
+.dash-empty p,
+.dash-note {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 1023px) {
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 639px) {
+  .dash-stats {
+    grid-template-columns: 1fr;
+  }
+}

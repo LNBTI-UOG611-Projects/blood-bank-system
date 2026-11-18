@@ -67,8 +67,17 @@ export default function RegisterPage() {
       await registerDonor(form);
       setStatus("done");
       focusHeading();
-    } catch {
-      setStatus("error");
+    } catch (err) {
+      // Username or email already used: send the user back to step 1 to fix it
+      const field = /username/i.test(err.message) ? "username" : /email/i.test(err.message) ? "email" : null;
+      if (field) {
+        setErrors({ [field]: err.message });
+        setStep(0);
+        setStatus("idle");
+        focusHeading();
+      } else {
+        setStatus("error");
+      }
     }
   };
 
@@ -84,12 +93,16 @@ export default function RegisterPage() {
           You're registered, {form.fullName.split(" ")[0]}!
         </h2>
         <div className="alert alert--success" role="status">
-          <strong>Your donor account is ready</strong>
+          <strong>Your donor account is ready (username: {form.username})</strong>
           {form.smsOptIn
             ? `We'll send camp alerts to ${form.phone}.`
             : "You can turn on SMS alerts later from your profile."}
         </div>
-        <Link to="/login" className="btn btn--primary btn--lg btn--block">
+        <Link
+          to="/login"
+          state={{ username: form.username, registered: true }}
+          className="btn btn--primary btn--lg btn--block"
+        >
           Continue to log in
         </Link>
         <Link to="/" className="btn btn--ghost btn--lg btn--block">
