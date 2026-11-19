@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./tokens.css";
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-bold);
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--content-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px; /* touch target */
+  padding: 0.625rem 1.125rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  line-height: 1.2;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn--lg {
+  min-height: 48px;
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem; /* 15px */
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--ghost {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+.btn--ghost:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-bg);
+}
+
+.btn--white {
+  background: #fff;
+  color: var(--color-primary);
+}
+.btn--white:hover {
+  background: var(--color-primary-light);
+}
+
+.btn--outline-light {
+  background: var(--color-teal);
+  border-color: #fff;
+  color: #fff;
+}
+.btn--outline-light:hover {
+  background: var(--color-teal-hover);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1875rem 0.625rem;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.badge--red { background: var(--color-primary-light); color: var(--color-primary); }
+.badge--teal { background: var(--color-teal-light); color: var(--color-teal); }
+.badge--green { background: var(--color-success-light); color: var(--color-success); }
+.badge--amber { background: var(--color-warning-light); color: var(--color-warning); }
+.badge--blue { background: var(--color-blue-light); color: var(--color-blue); }
+
+/* ---------- Alerts ---------- */
+.alert {
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+}
+.alert strong {
+  display: block;
+  font-weight: var(--fw-semibold);
+  margin-bottom: 2px;
+}
+.alert--info { background: var(--color-blue-light); color: var(--color-text); }
+.alert--info strong { color: var(--color-blue); }
+.alert--success { background: var(--color-teal-light); color: var(--color-text); }
+.alert--success strong { color: var(--color-teal); }
+.alert--error { background: var(--color-primary-light); color: var(--color-text); }
+.alert--error strong { color: var(--color-primary); }
+
+/* ---------- Text links ---------- */
+.text-link {
+  color: var(--color-primary);
+  font-weight: var(--fw-semibold);
+}
+.text-link:hover {
+  text-decoration: underline;
+}

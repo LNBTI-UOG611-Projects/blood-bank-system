@@ -1,0 +1,40 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.logo__drop {
+  width: 24px;
+  height: 33px;
+  fill: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo__name {
+  font-size: 1.0625rem; /* 17px */
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+}
+
+.logo__tagline {
+  font-size: 0.625rem; /* 10px */
+  font-weight: var(--fw-medium);
+  color: var(--color-text-muted);
+}
+
+.logo--light .logo__drop {
+  fill: #fff;
+}
+.logo--light .logo__name {
+  color: #fff;
+}
+.logo--light .logo__tagline {
+  color: var(--color-on-primary-muted);
+}
